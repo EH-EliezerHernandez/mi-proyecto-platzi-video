@@ -1,3 +1,6 @@
+:root {
+  --fuente-principal: "Muli", sans-serif;
+}
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -12,7 +15,7 @@ html {
 body {
   background-color: #8f57fd;
   font-size: 1.6rem;
-  font-family: "Muli", sans-serif;
+  font-family: var(--fuente-principal);
 }
 %container {
   padding: 0;
@@ -23,7 +26,11 @@ body {
   text-decoration: none;
   color: white;
 }
-
+%center {
+  margin: 0;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
 .header {
   @extend %container;
   display: flex;
@@ -61,6 +68,9 @@ body {
       .header__profile-enlace {
         @extend %enlace;
         white-space: nowrap;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -80,5 +90,31 @@ body {
     .header__profile-icon {
       margin-inline-end: 8px;
     }
+  }
+}
+.section-search {
+  margin-block-start: 118px;
+  font-size: 17px;
+  .section-search__tittle {
+    text-align: center;
+    color: white;
+  }
+  .search {
+    display: block;
+    @extend %center;
+    margin-block-start: 20px;
+    width: 70%;
+    padding: 20px;
+    padding-block-start: 14px;
+    padding-block-end: 14px;
+    font-size: 1.6rem;
+    background-color: rgba(225, 225, 255, 0.1);
+    outline: none;
+    border: 2px solid white;
+    border-radius: 30px;
+  }
+  .search::placeholder {
+    color: white;
+    font-family: var(--fuente-principal);
   }
 }
