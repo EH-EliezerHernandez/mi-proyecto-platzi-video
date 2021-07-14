@@ -120,9 +120,11 @@ body {
 }
 /* section carousel */
 .section-carousel {
+  margin-block-start: 80px;
   @extend %container;
 }
 .section-carousel__tittle {
+  font-size: 1.6rem;
   color: white;
 }
 .carousel {
