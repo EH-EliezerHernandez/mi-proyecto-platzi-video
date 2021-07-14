@@ -122,9 +122,9 @@ body {
 /* section carousel */
 .section-carousel {
   margin-block-start: 80px;
-  @extend %container;
 }
 .section-carousel__tittle {
+  @extend %container;
   font-size: 1.6rem;
   color: white;
 }
@@ -132,6 +132,7 @@ body {
   padding: 70px;
   padding-inline-start: 0px;
   padding-inline-end: 40px;
+  overflow: auto;
   .carousel__container {
     white-space: nowrap;
     .card-video {
