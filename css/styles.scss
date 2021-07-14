@@ -118,3 +118,17 @@ body {
     font-family: var(--fuente-principal);
   }
 }
+/* footer */
+.footer {
+  @extend %container;
+  padding-block-start: 60px;
+  padding-block-end: 60px;
+  .footer__container-navegacion {
+    display: flex;
+    column-gap: 20px;
+    list-style: none;
+    .footer__enlace {
+      @extend %enlace;
+    }
+  }
+}
